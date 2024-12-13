@@ -1,12 +1,15 @@
 import { HStack, Image, Text } from "@chakra-ui/react"
 import Logo from "../assets/GameHub Resources/Logo/logo.webp"
+import { ColorModeButton } from "./ui/color-mode"
 
 const Navbar = () => {
   return (
-    <HStack>
-        <Image boxSize="60px" alt="Logo" src={Logo}></Image>
-        <Text  fontWeight="500" fontSize="25px">Game Hub</Text>
-    </HStack>
+    <>
+      <HStack justifyContent={'space-between'} padding='10px'>
+            <Image boxSize="60px" alt="Logo" src={Logo}></Image>
+            <ColorModeButton></ColorModeButton>
+      </HStack>
+    </>
   )
 }
 
