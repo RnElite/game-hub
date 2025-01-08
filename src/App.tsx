@@ -13,7 +13,7 @@ function App() {
         <Navbar></Navbar>
       </GridItem>
       <Stack hideBelow="lg">
-        <GridItem area={"aside"}><GenreList></GenreList></GridItem>
+        <GridItem paddingX={5} area={"aside"}><GenreList></GenreList></GridItem>
       </Stack>
       <GridItem area={"main"}>
         <GameGrid></GameGrid>

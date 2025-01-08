@@ -15,6 +15,4 @@ export interface Game {
 
 const useGame = () => useData<Game>('/games')
 
-
-
 export default useGame
