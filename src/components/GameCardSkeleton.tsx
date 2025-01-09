@@ -8,7 +8,6 @@ const GameCardSkeleton = () => {
         <CardBody>
             <SkeletonText/>
         </CardBody>
-        
     </Card.Root>
   )
 }
