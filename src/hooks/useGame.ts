@@ -1,5 +1,6 @@
 import useData from "./useData";
-import { Genre } from "./useGenres";
+import { Genre } from "./useGenre";
+
 
 export interface Platform {
     id: number;
