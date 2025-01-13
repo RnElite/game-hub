@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ArrowUpDown = ({value}:Props) => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
         setIsOpen(!isOpen);
