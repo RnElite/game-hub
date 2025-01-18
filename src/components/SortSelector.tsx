@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import {
   MenuContent,
   MenuRadioItem,
@@ -8,20 +7,31 @@ import {
 import { useState } from "react"
 import ArrowUpDown from "./Icons-Animations/ArrowUpDown"
 
+export interface Sort{
+  onSelecSortOrder: (sortOrder: String)=>void;
+  sortOrder: String;
+}
 
-
-const SortSelector = () => {
-    const [value, setValue] = useState("Order By Relevant: Descending")
+const SortSelector = ({onSelecSortOrder, sortOrder}:Sort) => {
+    const [value, setValue] = useState("Order By:")
+    const setOrders = [
+      {value:'', label:'Relevance'},
+      {value:'-added', label:'Data added'},
+      {value:'name', label:'Name'},
+      {value:'-relesed', label:'Release date'},
+      {value:'-matacritic', label:'Popluarity'},
+      {value:'-rating', label:'Average rating'}, 
+    ];
+    const currentSortOrder = setOrders.find(order => order.value === sortOrder)
     return (
       <MenuRoot>
-        <ArrowUpDown value={value} />
+        <ArrowUpDown Sort={currentSortOrder?.label || 'Relevance'} value={""} />
         <MenuContent minW="10rem">
-          <MenuRadioItemGroup
-            value={value}
-            onValueChange={(e) => setValue(e.value)}
-          >
-            <MenuRadioItem value="asc">Ascending</MenuRadioItem>
-            <MenuRadioItem value="desc">Descending</MenuRadioItem>
+          <MenuRadioItemGroup value={value} onValueChange={(e) => setValue(e.value)}>
+            {setOrders.map(order => 
+            <MenuRadioItem onClick={()=>onSelecSortOrder(order.value)} key={order.value} value={order.value}>
+              {order.label}
+            </MenuRadioItem>)}
           </MenuRadioItemGroup>
         </MenuContent>
       </MenuRoot>

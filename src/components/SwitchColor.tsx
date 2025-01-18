@@ -6,7 +6,7 @@ import { useColorMode } from "./ui/color-mode"
 const SwitchColor = () => {
     const {toggleColorMode, colorMode} = useColorMode();
   return (
-    <Switch checked={colorMode === 'dark'} onChange={toggleColorMode}
+    <Switch marginRight={10} checked={colorMode === 'dark'} onChange={toggleColorMode}
       colorPalette="blue"
       size="lg"
       trackLabel={{
