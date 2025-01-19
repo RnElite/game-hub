@@ -20,7 +20,7 @@ const SortSelector = ({onSelecSortOrder, sortOrder}:Sort) => {
       {value:'name', label:'Name'},
       {value:'-relesed', label:'Release date'},
       {value:'-matacritic', label:'Popluarity'},
-      {value:'-rating', label:'Average rating'}, 
+      {value:'rating', label:'Average rating'}, //-rating
     ];
     const currentSortOrder = setOrders.find(order => order.value === sortOrder)
     return (

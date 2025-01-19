@@ -7,6 +7,7 @@ import { Genre } from "./hooks/useGenre";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/useGame";
 import SortSelector from "./components/SortSelector";
+import { base } from "framer-motion/client";
 
 
 export interface GameQuery {
@@ -27,7 +28,7 @@ function App() {
       <GridItem area={"nav"}>
         <Navbar></Navbar>
       </GridItem>
-      <GridItem paddingX={4} area={"aside"}>
+      <GridItem hideBelow={'lg'} paddingX={4} area={"aside"}>
         <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre)=> setGameQuery({...gameQuery, genre})}></GenreList>
       </GridItem>
       <GridItem area={"main"}>
