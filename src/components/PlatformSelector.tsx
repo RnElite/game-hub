@@ -24,7 +24,7 @@ const PlatformSelector = ({onSelectPlatform}:Props) => {
   if(error) return <Text>{error}</Text>
   return (
     <MenuRoot>
-        <ArrowUpDown value={value}></ArrowUpDown>
+        <ArrowUpDown value={value} Sort={""}></ArrowUpDown>
       <MenuContent minW="10rem">
         <MenuRadioItemGroup value={value} onValueChange={(e) => setValue(e.value)}>
             {data.map(platform => <MenuRadioItem onClick={()=>onSelectPlatform(platform)} key={platform.id} value={platform.name}>{platform.name}</MenuRadioItem>)}

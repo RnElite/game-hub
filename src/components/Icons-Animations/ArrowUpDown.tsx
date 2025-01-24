@@ -5,8 +5,7 @@ import { Button, MenuTrigger } from '@chakra-ui/react';
 
 interface Props {
     value: string;
-    Sort: string;
-
+    Sort: string
 }
 
 

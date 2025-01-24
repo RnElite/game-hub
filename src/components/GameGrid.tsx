@@ -15,13 +15,11 @@ const GameGrid = ({gameQuery}:Props) => {
     if (error) return <Text>{error}</Text>
   return (
 
-    <>
         <SimpleGrid marginRight={{ lg:10, xl:10 }} columns={{ sm:1, md:2, lg:3, xl:4 }} gap={4}>
           {isLoading && skeletons.map(skeleton => <GameCardSkeleton key={skeleton}></GameCardSkeleton>)}
           {data.map(game=>
           <GameCard key={game.id} game={game}></GameCard>)}
         </SimpleGrid>
-    </>
     
   )
 }
