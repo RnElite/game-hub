@@ -40,7 +40,6 @@ function App() {
           </HStack>
           <GameGrid gameQuery={gameQuery}/>
       </GridItem>
-      {/* <GridItem bg={"gray"} area={"footer"}>Footer</GridItem> */}
     </Grid>
   )
 } 
